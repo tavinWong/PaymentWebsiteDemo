@@ -1,18 +1,4 @@
 <?php
-/*
-
-- Make changes to 1, 2, 3
-
-- To verify the APNS Certificate : Use the following command :
-
-Command : 
-openssl s_client -connect gateway.sandbox.push.apple.com:2195 -cert apns_cert.pem -key apns_cert.pem
-
-Note :
-* Replace 'apns_cert' with certificate name (two places in the command)
-* It's OKAY to get "unable to get local issuer certificate" error as long as it gets Connected. See "Verify_apns_certificate.png"
-
-*/
 
 ini_set('display_errors','On'); 
 error_reporting(E_ALL);

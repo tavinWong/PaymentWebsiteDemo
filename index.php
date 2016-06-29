@@ -14,6 +14,7 @@
     <!-- CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/product.css" rel="stylesheet">
+    <link href="css/customize.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -47,11 +48,15 @@
                         <a href="#">Explore</a>
                     </li>
                     <li>
+                        <a href="#">Profile</a>
+                    </li>
+                    <li>
                         <a href="#">Wish List</a>
                     </li>
                     <li>
                         <a href="#">Cart</a>
                     </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -64,8 +69,8 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>A shopping page</h1>
-                <p class="lead">put some items in the explore page please</p>
+                <h1></h1>
+                <p class="lead"></p>
                 <ul class="list-unstyled">
 
                 </ul>

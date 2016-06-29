@@ -27,6 +27,8 @@
 							Add to wishlist 
 						</button>
 					</div>
+
+					<div class="debugSession">echo your debug info here</div>
 				</div>
 			</div> 
 		</div>
