@@ -64,7 +64,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1>A shopping page</h1>
-                <p class="lead">put some items in the explore page</p>
+                <p class="lead">put some items in the explore page please</p>
                 <ul class="list-unstyled">
 
                 </ul>
