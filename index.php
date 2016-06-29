@@ -9,10 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>E-Shop</title>
 
-    <!-- Bootstrap Core CSS -->
+    <!-- CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/product.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -49,7 +50,7 @@
                         <a href="#">Wish List</a>
                     </li>
                     <li>
-                        <a href="#">Basket</a>
+                        <a href="#">Cart</a>
                     </li>
                 </ul>
             </div>
@@ -69,6 +70,9 @@
 
                 </ul>
             </div>
+
+            <div id="product">
+            </div>
         </div>
         <!-- /.row -->
 
@@ -80,6 +84,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(e) {
+            $('#product').load('pages/product.php',function(){});
+        });
+    </script>
 
 </body>
 
