@@ -11,18 +11,9 @@
 
     <title>E-Shop</title>
 
-    <!-- CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/product.css" rel="stylesheet">
-    <link href="css/customize.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
+    <?php include('config/css.php'); ?>
+    <?php include('config/js.php'); ?>
 
 </head>
 
@@ -84,16 +75,11 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
     <script>
         $(document).ready(function(e) {
             $('#product').load('pages/product.php',function(){});
         });
+        
     </script>
 
 </body>

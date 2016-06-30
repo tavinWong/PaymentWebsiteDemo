@@ -1,3 +1,6 @@
 .navbar-nav{
 	float: right;
 }
+.navbar-brand{
+	padding-left: 50px;
+}

@@ -27,7 +27,10 @@
 							Add to wishlist 
 						</button>
 					</div>
-
+					<div class="btn-group buynow">
+						<input type="submit" class="btn btn-primary" name="buyNow" value="buyNow">
+						</button>
+					</div>
 					<div class="debugSession">echo your debug info here</div>
 				</div>
 			</div> 
@@ -76,3 +79,18 @@
 		</div>
 	</div>
 </div>
+
+    <script>
+		$(document).ready(function(){
+		    $('.btn-primary').click(function(){
+		        var clickBtnValue = $(this).val();
+		        var ajaxurl = 'functions/paymentPush.php';
+		        data =  {'action': clickBtnValue};
+		        $.post(ajaxurl, data, function (response) {
+		            // Response div goes here.
+		            
+		        });
+		    });
+		});       
+    </script>
+
