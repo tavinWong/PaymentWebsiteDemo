@@ -27,10 +27,15 @@
 							Add to wishlist 
 						</button>
 					</div>
+
 					<div class="btn-group buynow">
-						<input type="submit" class="btn btn-primary" name="buyNow" value="buyNow">
-						</button>
+						<!-- Trigger the modal with a button -->
+					  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Buy now</button>
+					  <?php include('../functions/payment.php'); ?>
+
 					</div>
+
+
 					<div class="debugSession">echo your debug info here</div>
 				</div>
 			</div> 
@@ -79,6 +84,8 @@
 		</div>
 	</div>
 </div>
+
+
 
     <script>
 		$(document).ready(function(){

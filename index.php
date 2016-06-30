@@ -69,6 +69,9 @@
 
             <div id="product">
             </div>
+
+            
+
         </div>
         <!-- /.row -->
 
@@ -79,7 +82,7 @@
         $(document).ready(function(e) {
             $('#product').load('pages/product.php',function(){});
         });
-        
+
     </script>
 
 </body>
