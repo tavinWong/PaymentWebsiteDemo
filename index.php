@@ -15,6 +15,7 @@
     <?php include('config/css.php'); ?>
     <?php include('config/js.php'); ?>
 
+
 </head>
 
 <body>
@@ -68,9 +69,10 @@
             </div>
 
             <div id="product">
+                <?php include('pages/product.php'); ?>
             </div>
 
-            
+
 
         </div>
         <!-- /.row -->
@@ -78,12 +80,7 @@
     </div>
     <!-- /.container -->
 
-    <script>
-        $(document).ready(function(e) {
-            $('#product').load('pages/product.php',function(){});
-        });
 
-    </script>
 
 </body>
 

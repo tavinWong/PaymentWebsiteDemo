@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="content-wrapper">	
 		<div class="item-container">	
-			<div class="container">	
+			<div class="container" ng-app="priceApp" ng-controller="priceController" >	
 				<div class="col-md-12">
 					<div class="product col-md-5 service-image-left">
                     
@@ -14,29 +14,50 @@
 					<div class="product-desc">The Leica M9 is a digital full-frame rangefinder camera. It was introduced by Leica Camera AG in September 2009. It uses an 18.5-megapixel Kodak image sensor, and is compatible with almost all M mount lenses.</div>
 					<div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
 					<hr>
-					<div class="product-price">£ 2200.00</div>
-					<div class="product-stock">In Stock</div>
-					<hr>
-					<div class="btn-group cart">
-						<button type="button" class="btn btn-success">
-							Add to cart 
-						</button>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="product-price"><p>2200</p><p>£ </p></div> 
+						<div class="product-stock">In Stock</div>
 					</div>
-					<div class="btn-group wishlist">
-						<button type="button" class="btn btn-danger">
-							Add to wishlist 
-						</button>
+					<div class="col-md-6">
+						<div class="btn-group cart">
+							<button type="button" class="btn btn-success">
+								Add to cart 
+							</button>
+						</div>
+						<div class="btn-group wishlist">
+							<button type="button" class="btn btn-danger">
+								Add to wishlist 
+							</button>
+						</div>
+					</div>
+				</div>
+
+
+				<hr>
+				<div class="row" >
+					<div class="col-md-3">
+						<input type="number" class="form-control bfh-number" style="width:100px;" ng-model="quantity">
+					</div>
+					<div class="col-md-3">
+						<button type="button" class="btn btn-default addButton"><i class="fa fa-plus"></i></button>
+						<button type="button" class="btn btn-default minusButton"><i class="fa fa-minus"></i></button>
+					</div>
+					<div class="col-md-3">
+						Total Price: <p>{{quantity}}</p>
+					</div>
+					<div class="col-md-3">
+						<div class="btn-group buynow">
+							<!-- Trigger the modal with a button -->
+					  		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Buy now</button>
+					  		<?php include('functions/payment.php'); ?>
+						</div>
 					</div>
 
-					<div class="btn-group buynow">
-						<!-- Trigger the modal with a button -->
-					  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Buy now</button>
-					  <?php include('../functions/payment.php'); ?>
-
-					</div>
+				</div>
+					
 
 
-					<div class="debugSession">echo your debug info here</div>
 				</div>
 			</div> 
 		</div>
@@ -85,19 +106,17 @@
 	</div>
 </div>
 
+<script>
+	var app = angular.module('priceApp',[]);
+	app.controller('priceController',function($scope){
+		$scope.quantity = 0;
+		$scope.totalPrice = parseInt($scope.quantity) * parseInt($scope.price);
+		console.log($scope.quantity);
+	})
+
+</script>
 
 
-    <script>
-		$(document).ready(function(){
-		    $('.btn-primary').click(function(){
-		        var clickBtnValue = $(this).val();
-		        var ajaxurl = 'functions/paymentPush.php';
-		        data =  {'action': clickBtnValue};
-		        $.post(ajaxurl, data, function (response) {
-		            // Response div goes here.
-		            
-		        });
-		    });
-		});       
-    </script>
+
+
 
