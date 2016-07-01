@@ -38,7 +38,7 @@
                         <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text'>
                       </div>
                       <div class='col-xs-4 form-group expiration required'>
-                        <label class='control-label'> </label>
+                        <label class='control-label'></label>
                         <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text'>
                       </div>  
                     </div>

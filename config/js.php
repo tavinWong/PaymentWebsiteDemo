@@ -18,21 +18,23 @@
 
 
 <script>
-	$(document).on('click', '#sendBtn', function(){
+	$(document).on('click', '#buyButton',function(){
+		var tempPrice = $('#total-price').html();
+    	console.log(tempPrice);
+    	$('#amount').text(tempPrice);
+	})
+	.on('click', '#sendBtn', function(){
 			
-	    	var totalPrice = $('#amount').text();
-	    	
-	    	data ={
-	    		'total': totalPrice
-	    	};
-	    	$.post('functions/paymentPush.php',data, function(response){
-	    		alert( response);
-	    	});
+    	var totalPrice = $('#amount').text();
+
+    	data ={
+    		'total': totalPrice
+    	};
+    	$.post('functions/paymentPush.php',data, function(response){
+    		alert( response);
+    	});
 	});
-	$(document).ready(function(){
-		var tempPrice = $('.product-price').text();
-		$('#amount').html(tempPrice);	
-	});
+
 
 
 </script>

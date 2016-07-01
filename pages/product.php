@@ -16,7 +16,7 @@
 					<hr>
 				<div class="row">
 					<div class="col-md-6">
-						<div class="product-price"><p>2200</p><p>£ </p></div> 
+						<p id="product-price">2200</p>
 						<div class="product-stock">In Stock</div>
 					</div>
 					<div class="col-md-6">
@@ -44,12 +44,12 @@
 						<button type="button" class="btn btn-default minusButton"><i class="fa fa-minus"></i></button>
 					</div>
 					<div class="col-md-3">
-						Total Price: <p>{{quantity}}</p>
+						Total Price: <div id="total-price">{{price*quantity}}</div>
 					</div>
 					<div class="col-md-3">
 						<div class="btn-group buynow">
 							<!-- Trigger the modal with a button -->
-					  		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Buy now</button>
+					  		<button type="button" class="btn btn-primary" id="buyButton" data-toggle="modal" data-target="#myModal">Buy now</button>
 					  		<?php include('functions/payment.php'); ?>
 						</div>
 					</div>
@@ -60,7 +60,7 @@
 
 				</div>
 			</div> 
-		</div>
+		</div>		
 		<div class="container-fluid">		
 			<div class="col-md-12 product-info">
 					<ul id="myTab" class="nav nav-tabs nav_tabs">
@@ -110,9 +110,9 @@
 	var app = angular.module('priceApp',[]);
 	app.controller('priceController',function($scope){
 		$scope.quantity = 0;
-		$scope.totalPrice = parseInt($scope.quantity) * parseInt($scope.price);
-		console.log($scope.quantity);
-	})
+		$scope.price = parseInt($('#product-price').text());	
+	});
+	var totalPrice = parseInt($('#total-price').text());
 
 </script>
 
