@@ -28,7 +28,13 @@
 	})
 	.on('click', '#sendBtn', function(){
 			
+    	var totalPrice = $('#amount').text();
+
+    	data ={
+    		'total': totalPrice
+    	};
+    	$.post('functions/paymentPush.php',data, function(response){
+    		alert( response);
+    	});
 	});
-
-
 </script>
