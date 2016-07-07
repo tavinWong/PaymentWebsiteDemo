@@ -16,6 +16,9 @@
 <!-- Bootstrap -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+<!-- customized js-->
+<script src="js/paymentForm.js"></script>
+
 
 <script>
 	$(document).on('click', '#buyButton',function(){
@@ -25,16 +28,7 @@
 	})
 	.on('click', '#sendBtn', function(){
 			
-    	var totalPrice = $('#amount').text();
-
-    	data ={
-    		'total': totalPrice
-    	};
-    	$.post('functions/paymentPush.php',data, function(response){
-    		alert( response);
-    	});
 	});
-
 
 
 </script>
