@@ -14,7 +14,7 @@ if (isset($_POST['total'])) {
 function sendNotification($input) {
 	error_reporting(E_ALL);
 	// Change 1 : No braces and no spaces
-	$deviceToken= '4906eb3e579094c0e1d57f0f167dcc544b93e5a777a30093f035727fd5204793'; 
+	$deviceToken= '51fed9ee07a5695ecab3f2077d0ec93490fb1850f1ab7514a57aba763acc4a48'; 
 	// Change 2 : If any
 	$passphrase = '123456'; 
 	$message = 'You just paid '.$input.' pounds.';
@@ -32,7 +32,9 @@ function sendNotification($input) {
 	// Create the payload body
 	$body['aps'] = array(
 	    'alert' => $message,
-	    'sound' => 'default'
+	    'sound' => 'default',
+	    'amount' => $input,
+	    'category' => 'PAYMENT_CATEGORY',
 	    );
 
 	// Encode the payload as JSON
