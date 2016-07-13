@@ -16,20 +16,7 @@ $(function() {
         $input.parent().addClass('has-error');
         $errorMessage.removeClass('hide');
         e.preventDefault(); // cancel on first error
-      } else{
-
-        //send request to the server
-        var totalPrice = $('#amount').text();
-
-        data ={
-          'total': totalPrice
-        };
-        $.post('functions/paymentPush.php',data, function(response){
-          alert( response);
-        });
-
-
-      }
+      } 
     });
   });
 });

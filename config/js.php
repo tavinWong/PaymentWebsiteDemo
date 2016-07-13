@@ -36,5 +36,9 @@
     	$.post('functions/paymentPush.php',data, function(response){
     		alert( response);
     	});
-	});
+	})
+    .on('click','#addBtn', function(){
+        alert('addTest');
+    });
 </script>
+    

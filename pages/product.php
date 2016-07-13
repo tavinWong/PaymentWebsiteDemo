@@ -16,7 +16,7 @@
 					<hr>
 				<div class="row">
 					<div class="col-md-6">
-						<p id="product-price">2200</p>
+						<p id="product-price">18</p>
 						<div class="product-stock">In Stock</div>
 					</div>
 					<div class="col-md-6">
@@ -40,8 +40,8 @@
 						<input type="number" class="form-control bfh-number" style="width:100px;" ng-model="quantity">
 					</div>
 					<div class="col-md-3">
-						<button type="button" class="btn btn-default addButton"><i class="fa fa-plus"></i></button>
-						<button type="button" class="btn btn-default minusButton"><i class="fa fa-minus"></i></button>
+						<button type="button" class="btn btn-default addButton" id="addButton"><i class="fa fa-plus"></i></button>
+						<button type="button" class="btn btn-default minusButton" onclick="minusQuantity()"><i class="fa fa-minus"></i></button>
 					</div>
 					<div class="col-md-3">
 						Total Price: <div id="total-price">{{price*quantity}}</div>

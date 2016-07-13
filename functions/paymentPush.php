@@ -14,10 +14,10 @@ if (isset($_POST['total'])) {
 function sendNotification($inputAmount) {
 	error_reporting(E_ALL);
 	// Change 1 : No braces and no spaces
-	$deviceToken= '51fed9ee07a5695ecab3f2077d0ec93490fb1850f1ab7514a57aba763acc4a48'; 
+	$deviceToken= 'b99890ae60232bd650bd7456e73fbed142e6d2342d1583d2fd58b2bdfc8e986a'; 
 	// Change 2 : If any
 	$passphrase = '123456'; 
-	$message = 'You just paid '.$inputAmount.' pounds.';
+	$message = 'Amazon Transaction';
 	$ctx = stream_context_create();
 	// Change 3 : APNS Cert File name and location.
 	stream_context_set_option($ctx, 'ssl', 'local_cert', '/Applications/XAMPP/htdocs/paymentPush/apns_cert.pem'); 
